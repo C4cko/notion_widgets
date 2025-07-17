@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Carrossel Vertical 2:3</title>
+  <title>Carrossel no Notion</title>
   <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'>
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap");
@@ -14,23 +14,22 @@
       padding: 0;
     }
 
-    body {
+    html, body {
+      background-color: transparent;
       font-family: "Lexend", sans-serif;
-      background-color: #362a2b;
-      color: #e5ebf3;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
     }
 
     .slider {
       width: 400px;
-      height: 600px; /* Proporção 2:3 */
+      height: 600px;
       position: relative;
       overflow: hidden;
+      margin: auto;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      box-shadow: none;
     }
 
     .slide {
@@ -73,6 +72,7 @@
       color: #e5ebf3;
       cursor: pointer;
       padding: 5px 7px;
+      font-size: 0.8rem;
       border-radius: 50%;
       outline: none;
       transition: 0.3s;
@@ -105,7 +105,7 @@
     const nextButton = document.getElementById("next");
     const prevButton = document.getElementById("prev");
     const auto = true;
-    const intervalTime = 15000;
+    const intervalTime = 15000; // 15 segundos
     let slideInterval;
 
     const nextSlide = () => {
